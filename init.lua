@@ -599,16 +599,17 @@ require('lazy').setup({
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --  See `:help lsp-config` for information about keys and how to configure
       local servers = {
-        -- clangd = {},
-        -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
-        --
-        -- Some languages (like typescript) have entire language plugins that can be useful:
-        --    https://github.com/pmizio/typescript-tools.nvim
-        --
-        -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
+        bashls = {},
+        docker_compose_language_service = {},
+        dockerls = {},
+        gopls = {},
+        helm_ls = {},
+        jsonls = {},
+        marksman = {},
+        pyright = {},
+        ruff = {},
+        terraformls = {},
+        yamlls = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -620,9 +621,11 @@ require('lazy').setup({
       -- You can press `g?` for help in this menu.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'lua_ls', -- Lua Language server
-        'stylua', -- Used to format Lua code
-        -- You can add other tools here that you want Mason to install
+        'lua_ls',
+        'stylua',
+        'shellcheck',
+        'tflint',
+        'trivy',
       })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }

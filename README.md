@@ -77,3 +77,33 @@ git clone https://github.com/michMartineau/nvim-config.git "${XDG_CONFIG_HOME:-$
 | Plugin | Description |
 |--------|-------------|
 | [claude-code.nvim](https://github.com/greggh/claude-code.nvim) | Claude Code integration |
+
+## Mason Tools
+
+LSP servers and tools auto-installed via [mason.nvim](https://github.com/williamboman/mason.nvim).
+
+### LSP Servers
+
+| Server | Language/Purpose |
+|--------|-----------------|
+| bashls | Bash |
+| docker_compose_language_service | Docker Compose |
+| dockerls | Dockerfile |
+| gopls | Go |
+| helm_ls | Helm charts |
+| jsonls | JSON |
+| lua_ls | Lua |
+| marksman | Markdown |
+| pyright | Python |
+| ruff | Python (linting/formatting) |
+| terraformls | Terraform |
+| yamlls | YAML |
+
+### Formatters & Linters
+
+| Tool | Purpose |
+|------|---------|
+| stylua | Lua formatter |
+| shellcheck | Shell script linter |
+| tflint | Terraform linter |
+| trivy | Security scanner |
